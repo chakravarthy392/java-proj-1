@@ -33,7 +33,7 @@ node {
        sh 'curl -u admin:redhat@123 -T target/**.war "http://34.227.229.208:8080/manager/text/deploy?path=/devops&update=true"'
    }
    stage("Smoke Test"){
-       sh "curl --retry-delay 10 --retry 5 http://34.227.229.208:8080/devops"
+       sh "curl --retry-delay 10 --retry 5 http://34.227.229.208:8080/java-proj-1"
    } 
    stage('Artifacts') {
       if (isUnix()) {
